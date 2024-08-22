@@ -1,22 +1,22 @@
-#include <stdio.h>// bliblioteca de comunicação com usuário
-#include<stdlib.h>//biblioteca de alocação de espaço em memória
-#include <locale.h>//biblioteca de alocação de texto por região
-#include <string.h>//biblioteca responsável por cuidar das string     
+#include <stdio.h>// bliblioteca de comunicaÃ§Ã£o com usuÃ¡rio
+#include<stdlib.h>//biblioteca de alocaÃ§Ã£o de espaÃ§o em memÃ³ria
+#include <locale.h>//biblioteca de alocaÃ§Ã£o de texto por regiÃ£o
+#include <string.h>//biblioteca responsÃ¡vel por cuidar das string     
 
- int registro() //funçao reponsavel por cadastrar usuario no sistema
+ int registro() //funÃ§ao reponsavel por cadastrar usuario no sistema
  {
-     //inicio criação de variavel/string
+     //inicio criaÃ§Ã£o de variavel/string
 	 char arquivo[40];
 	 char cpf[40];
 	 char nome[40];
 	 char sobrenome[40];
 	 char cargo[40];
-	 //final da criação de variáveis /string
+	 //final da criaÃ§Ã£o de variÃ¡veis /string
 	 
-	 printf("digite ocpf a ser cadastrado:"); //coletando informação do usuário
+	 printf("digite ocpf a ser cadastrado:"); //coletando informaÃ§Ã£o do usuÃ¡rio
 	 scanf("%s", cpf);	//% refere-se a string
 	 
-	 strcpy(arquivo, cpf); // responsável por copiar valores da string
+	 strcpy(arquivo, cpf); // responsÃ¡vel por copiar valores da string
 
     FILE*file; // criar o arquivo 
     file = fopen(arquivo,"w");// criar arquivo
@@ -75,12 +75,12 @@
 	
 	if(file == NULL)
 	{
-		printf("não foi possivel abrir o arquivo não foi localizado!.\n");
+		printf("nÃ£o foi possivel abrir o arquivo nÃ£o foi localizado!.\n");
 	}
 	
 	while(fgets(conteudo, 200, file) != NULL)
 	{
-		printf("\nEssas são as informações do usuário:");
+		printf("\nEssas sÃ£o as informaÃ§Ãµes do usuÃ¡rio:");
 		printf("%s", conteudo);
 		printf("\n\n");
    }	
@@ -92,7 +92,7 @@
   {
   	 char cpf[40];
   	 
-	  printf("Digite o cpf do usuário a ser deletado: ");
+	  printf("Digite o cpf do usuÃ¡rio a ser deletado: ");
       scanf("%s",cpf);
       
       remove(cpf);
@@ -102,7 +102,7 @@
       
       if(file == NULL)
       {
-      	 printf("o usuário não se encontra no sistema!.\n");
+      	 printf("o usuÃ¡rio nÃ£o se encontra no sistema!.\n");
       	 system("pause");
       }
       
@@ -113,7 +113,7 @@
    
    int main ()	
    {
-   int opcao=0; // definindo variáveis
+   int opcao=0; // definindo variÃ¡veis
    int laco=1;
    
    for(laco=1;laco=1;)	
@@ -122,13 +122,13 @@
    
      setlocale(LC_ALL, "Portuguese");  //definindo liguaguem
  
-    printf("### cartório da EBAC ###\n\n"); // inicío do menu 
-	  printf("escolha a opção desejada do menu:\n\n");    
+    printf("### cartÃ³rio da EBAC ###\n\n"); // inicÃ­o do menu 
+	  printf("escolha a opÃ§Ã£o desejada do menu:\n\n");    
 	  printf("\t1 - registrar nomes \n"); 
 	  printf("\t2 - consultar nomes \n");
 	  printf("\t3 - deletar nomes \n\n");
 	  printf("\t4 - sair do sistema\n\n");
-	  printf("opção");// fim do menu
+	  printf("opÃ§Ã£o");// fim do menu
 	  printf("\t esse softare foi criado por leonardo ribeiro");
     
     scanf("%d", &opcao);// armazenando escolha do usuario
@@ -157,7 +157,7 @@
        
     
        default:
-       printf("essa opcao não esta disponivel!\n");
+       printf("essa opcao nÃ£o esta disponivel!\n");
        system("pause");
 	   break;
 		}
